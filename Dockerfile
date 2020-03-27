@@ -9,4 +9,6 @@ RUN \
   rm -rf $JBOSS_HOME/standalone/configuration/standalone_xml_history/ $JBOSS_HOME/standalone/log/* && \
   rm /tmp/*.jar
 
+ADD target/test.war $JBOSS_HOME/standalone/deployments/
+
 CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0"]

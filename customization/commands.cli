@@ -13,12 +13,12 @@ module add --name=com.mysql.jdbc --resources=/tmp/mysql-connector-java-8.0.19.ja
 )
 
 # Add the datasource
-data-source add --name=UnifiedPushDS \
+data-source add --name=MyExampleDS \
   --driver-name=mysql \
-  --jndi-name=java:jboss/datasources/ExampleMySQLDS \
-  --connection-url=jdbc:mysql://localhost:3306/sample?useUnicode=true&amp;characterEncoding=UTF-8 \
-  --user-name=user \
-  --password=password \
+  --jndi-name=java:jboss/datasources/MyExampleDS \
+  --connection-url=jdbc:mysql://host.docker.internal:3306/myExample?createDatabaseIfNotExist=true \
+  --user-name=root \
+  --password=secret \
   --use-ccm=false --max-pool-size=25 --blocking-timeout-wait-millis=5000 \
   --enabled=true
 

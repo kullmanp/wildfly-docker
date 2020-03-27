@@ -17,8 +17,8 @@ data-source add --name=MyExampleDS \
   --driver-name=mysql \
   --jndi-name=java:jboss/datasources/MyExampleDS \
   --connection-url=jdbc:mysql://host.docker.internal:3306/myExample?createDatabaseIfNotExist=true \
-  --user-name=root \
-  --password=secret \
+  --user-name=DB_USER \
+  --password=DB_PASSWORD \
   --use-ccm=false --max-pool-size=25 --blocking-timeout-wait-millis=5000 \
   --enabled=true
 
